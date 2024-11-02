@@ -239,3 +239,107 @@ void alphaTriangle(int n) {
         cout<<endl;
     }
 }
+// Q19.url=https://www.naukri.com/code360/problems/symmetric-void_6581919?leftPanelTabValue=SUBMISSION
+void symmetry(int n) {
+   int space=0;
+   for(int i=n;i>=1;i--){
+       for(int k=1;k<=i;k++){
+           cout<<"* ";
+       }
+       for(int s=0;s<space;s++){
+           cout<<" ";
+       }
+       for(int j=1;j<=i;j++){
+           cout<<"* ";
+       }
+       space=space+4;
+       cout<<"\n";
+   }
+   space=space-4;
+   for(int i=1;i<=n;i++){
+       for(int k=1;k<=i;k++){
+           cout<<"* ";
+       }
+       for(int s=0;s<space;s++){
+           cout<<" ";
+       }
+       for(int j=1;j<=i;j++){
+           cout<<"* ";
+       }
+       space=space+4;
+       cout<<"\n";
+   }
+}
+// Q20.url=https://www.naukri.com/code360/problems/symmetry_6581914?leftPanelTabValue=SUBMISSION
+void symmetry(int n) {
+    int space=(n+1)*2;
+   for(int i=1;i<=n;i++){
+       for(int k=1;k<=i;k++){
+           cout<<"* ";
+       }
+       for(int s=1;s<=space;s++){
+           cout<<" ";
+       }
+       for(int j=1;j<=i;j++){
+           cout<<"* ";
+       }
+       cout<<"\n";
+       space=space-4;
+   }
+   space=space+4;
+   for(int i=n-1;i>=1;i--){
+       for(int k=1;k<=i;k++){
+           cout<<"* ";
+       }
+       for(int s=1;s<=space;s++){
+           cout<<" ";
+       }
+       for(int j=1;j<=i;j++){
+           cout<<"* ";
+       }
+       cout<<"\n";
+       space=space+4;
+   }
+}
+// Q21.url=https://www.naukri.com/code360/problems/ninja-and-the-star-pattern-i_6581920?leftPanelTabValue=SUBMISSION
+void getStarPattern(int n) {
+
+    if(n==1){
+        cout<<"*";
+    }
+    else{
+    for(int i=1;i<=n;i++){
+       cout<<"*";
+    }
+    cout<<"\n";
+    for(int i=1;i<=n-2;i++){
+        for(int j=1;j<=1;j++){
+            cout<<"*";
+        }
+        for(int s=1;s<=n-2;s++){
+            cout<<" ";
+        }
+        for(int k=1;k<=1;k++){
+            cout<<"*";
+        }
+        cout<<"\n";
+    }
+    for (int i = 1; i <= n; i++) {
+        cout << "*";
+    }
+    }
+}
+
+// Q22.url=https://www.naukri.com/code360/problems/ninja-and-the-number-pattern-i_6581959?leftPanelTabValue=SUBMISSION
+void getNumberPattern(int n) {
+    for(int i=0;i<(n*2)-1;i++){
+        for(int j=0;j<(n*2)-1;j++){
+            int top=i;
+            int left=j;
+            int right=(2*n-2)-j;
+            int down = (2*n-2)-i;
+            cout<<n-min(min(top,down),min(left,right));
+        }
+        cout<<"\n";
+    }
+}
